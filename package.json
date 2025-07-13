@@ -1,4 +1,7 @@
 {
+  "name": "isaf-pfm-tutorial",
+  "version": "1.0.0",
+  "homepage": "https://m3-learning.github.io/ISAF-PFM-Tutorial/",
   "scripts": {
     "build": "slidev build"
   },
