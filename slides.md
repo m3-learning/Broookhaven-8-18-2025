@@ -30,6 +30,10 @@ layout: cover
 
 ## {{ new Date().toLocaleDateString() }}
 
+<QrGrid :items="[
+  { title: 'Slides', url: 'https://m3-learning.github.io/ISAF-PFM-Tutorial' },
+]" :columns="1" />
+
 <!-- <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
 </div> -->
