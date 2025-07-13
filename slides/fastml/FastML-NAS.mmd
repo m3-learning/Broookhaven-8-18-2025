@@ -1,0 +1,131 @@
+flowchart LR
+
+    %% Set the default font size to 15
+    style default text-size:15px;
+
+    subgraph DataFedClient[DataFed Client]
+        subgraph SourceCode[Source Code]
+            subgraph File1[File]
+                PythonScripts[Python Scripts]
+            end
+            subgraph Metadata1[Metadata]
+                Checksums[Checksums]
+                Environment["Environment (pipfreeze, dockerfile)"]
+            end
+        end
+
+        subgraph DataFedNeuralNetwork[Neural Network Hyperparameters]
+            subgraph Metadata2[Metadata]
+                Hyperparameters[Hyperparameters]
+                PythonEnvironment[Python Environment]
+                PerformanceResults[Performance Results]
+                ModelMetrics[Model Metrics]
+            end
+            subgraph File2[File]
+                PythonScripts[Python Scripts]
+                ModelWeights[Model Weights]
+            end
+        end
+
+        subgraph HLS4ML[HLS4ML]
+            subgraph File3[File]
+                HLSOutputFiles[HLS Output Files]
+            end
+            subgraph Metadata3[Metadata]
+                HLS4MLTuningParameters[HLS4ML Tuning Parameters]
+            end
+        end
+
+        subgraph VivadoDataFed[Vivado DataFed]
+            subgraph File4[File]
+                VivadoOutputFiles[Vivado Output Files]
+            end
+            subgraph Metadata4[Metadata]
+                ResourceReportData[Resource Report]
+            end
+        end
+    end
+
+    ResourceReport --> ResourceReportData
+    CompiledIPBlock --> VivadoOutputFiles
+
+    ModelTraining --> ModelWeights
+    ModelEvaluation --> ModelMetrics
+    PerformanceResults --> ModelMetrics
+    NeuralNetworkHyperparameter --> Hyperparameters
+    SourceCode --> DataFedNeuralNetwork
+    TuningParameters --> HLS4MLTuningParameters
+    HLS4MLConversion --> HLSOutputFiles
+
+
+    subgraph GlobusContainer[Globus Container]
+    end
+
+    DataFedRepository[DataFed Repository]
+
+    DataFedClient --> GlobusContainer --> DataFedRepository
+
+    subgraph QkerasContainer[Qkeras Container]
+        ModelTraining[Model Training]
+        ModelPruning[Model Pruning]
+        ModelEvaluation[Model Evaluation]
+        ModelTraining --> ModelPruning
+        ModelPruning --> ModelEvaluation
+        ModelEvaluation --> ModelTraining
+    end
+
+    QkerasContainer --> HLS4MLContainer
+
+    subgraph HLS4MLContainer[HLS4ML Container]
+        TuningParameters[Tuning Parameters]
+        HLS4MLConversion[HLS4ML Conversion]
+        TuningParameters --> HLS4MLConversion
+    end
+
+    HLS4MLConversion --> VivadoContainer
+    
+    subgraph VivadoContainer[Vivado Container]
+        CompiledIPBlock[Compiled IP Block]
+        ResourceReport[Resource Report]
+        CompiledIPBlock --> ResourceReport
+    end
+
+    ResourceReport --> DesignSpecification
+    DesignSpecification --> TuningParameters
+    DesignSpecification --> AutoMLContainer
+    
+    DesignSpecification[Design Specification]
+
+    subgraph AutoMLContainer[AutoML Container]
+        Orchestrator[Orchestrator]
+    end
+
+    AutoMLContainer --> NeuralNetworkHyperparameter
+    
+    subgraph NeuralNetworkHyperparameter[Neural Network Hyperparameter]
+        LayerSize[Layer Size]
+        LayerType[Layer Type]
+        LayerPrecisionRange[Layer Precision Range]
+
+        subgraph Optimization[Optimization]
+        class Optimization fill:#f0e68c,stroke:#f0e68c,stroke-width:2;
+            LearningRate[Learning Rate]
+            OptimizerOrder[Optimizer Order]
+            LearningRateScheduler[Learning Rate Scheduler]
+            RegularizationScheduler[Regularization Scheduler]
+        end
+        
+    end
+    
+    NeuralNetworkHyperparameter --> |"Valid Neural Network Architecture"| QkerasContainer
+
+    classDef file fill:#f0e6cc,stroke:#f0e6cc,stroke-width:2;
+    classDef metadata fill:#b4d8c7,stroke:#b4d8c7,stroke-width:2;
+    classDef container fill:#a0cdbb,stroke:#a0cdbb,stroke-width:2;
+    classDef dataFedRecord fill:#6bb6c4,stroke:#6bb6c4,stroke-width:2;
+
+    class File1,File2,File3,File4 file;
+    class Metadata1,Metadata2,Metadata3,Metadata4 metadata;
+    class DataFedClient,DataFedRepository,QkerasContainer,HLS4MLContainer,VivadoContainer,AutoMLContainer,NeuralNetworkHyperparameter,GlobusContainer container;
+    class SourceCode,DataFedNeuralNetwork,HLS4ML,VivadoDataFed dataFedRecord;    
+    classDef default fill:#5a91c0,stroke:#5a91c0,stroke-width:2;

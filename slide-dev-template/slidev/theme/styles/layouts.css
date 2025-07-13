@@ -1,0 +1,94 @@
+.slidev-layout {
+  h1 {
+    font-family: var(--slidev-font-h1);
+    color: #07294D;
+    font-size: 3rem !important;
+  }
+  
+  h2 {
+    font-family: var(--slidev-font-h2);
+    color: #07294D;
+  }
+
+  h3 {
+    font-family: var(--slidev-font-h3);
+    color: #6B90B2;
+  }
+
+  h4 {
+    font-family: var(--slidev-font-h4);
+    color: #685D79;
+  }
+
+  h5 {
+    font-family: var(--slidev-font-h5);
+    color: #A3C585;
+  }
+  
+  ul {
+    list-style: disc;
+    font-size: 1.5rem;
+    font-family: var(--slidev-font-h3);
+    color: #07294D;
+  }
+
+  li {
+    line-height: 1.5rem; /* Now it will work */
+    font-family: var(--slidev-font-h3);
+    color: #07294D;
+  }
+
+  p {
+    font-family: var(--slidev-font-body);
+    color: #07294D;
+    font-size: 1.5rem;
+  }
+
+  /* h1 + p {
+    @apply -mt-4 opacity-50 mb-4 font-serif;
+  }
+
+  p + h2, ul + h2, table + h2 {
+    @apply mt-10;
+  }
+
+  h3 {
+    @apply text-sm pt-2 uppercase tracking-widest font-500 -ml-[0.05em];
+  }
+
+  h3:not(.opacity-100) {
+    @apply opacity-40;
+  }
+
+ */
+}
+
+.title-large {
+  @apply text-left font-bold text-primary text-5xl;
+  font-family: var(--slidev-font-h1);
+  margin: 0;
+  padding: 0.5em 0;
+  font-size: 2.2rem !important;
+  background-color: #07294D;
+  background-image: linear-gradient(45deg, #006699 0%,  #07294D 2%);
+  background-size: 100%;
+  letter-spacing: -0.05em;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.slidev-layout.custom-layout {
+  @apply h-full w-full grid px-10 py-6 gap-4;
+  background-image: url("../assets/Drexel-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slidev-layout-reference {
+  font-family: var(--slidev-font-h4);
+  color: #685D79;
+  font-size: 0.6rem;
+}

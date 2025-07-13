@@ -1,0 +1,110 @@
+@import url("https://use.typekit.net/xka6whh.css");
+
+@font-face {
+    font-family: 'Hello Bird';
+    src: url('../fonts/Hello Bird.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Malonet';
+    src: url('../fonts/Malonet.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Papernotes';
+    src: url('../fonts/Papernotes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Anthonio';
+    src: url('../fonts/AnthonioScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Inter';
+    src: url('../fonts/inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "interitalic";
+    src: url('../fonts/interitallic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Papernotes Sketch';
+    src: url('../fonts/Papernotes.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Random Wednesday';
+    src: url('../fonts/Random Wednesday.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dream Orphans";
+    src: url('../fonts/Dream Orphans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url('../fonts/Coolvetica.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SyneMono-Regular";
+    src: url('../fonts/SyneMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AxiaStencilBlack";
+    src: url('../fonts/AxiaStencilBlack-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+--slidev-font-h1: 'Poppins';
+--slidev-font-h2: 'Papernotes';
+--slidev-font-h3: 'Inter';
+--slidev-font-h4: 'interitalic';
+--slidev-font-h5: 'Hello Bird';
+--slidev-font-body: 'Coolvetica';
+}
