@@ -216,7 +216,7 @@ textboxHeight: 0
 ---
 
 <QrGrid :items="[
-  { title: 'Slides', url: 'https://m3-learning.github.io/MOSAIC-Chicago-06-02-2025/' },
+  { title: 'Slides', url: 'https://m3-learning.github.io/ISAF-PFM-Tutorial' },
   { title: 'DataFed', url: 'https://datafed.ornl.gov/ui/welcome' },
   { title: 'Learning Symmetries', url: 'https://github.com/yig319/Understanding-Experimental-Images-by-Identifying-Symmetries-with-Deep-Learning' },
   { title: 'RHEED Analysis', url: 'https://github.com/m3-learning/Predicting-Pulsed-Laser-Deposition-SrTiO3-Homoepitaxy-Growth-Dynamics-using-RHEED'},
