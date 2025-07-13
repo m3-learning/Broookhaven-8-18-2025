@@ -74,6 +74,18 @@ src: ./slides/datafed/datafed-workflow/datafed-workflow.md
 ---
 
 ---
+layout: center
+title: Embedded Webpage
+---
+
+<a href="https://colab.research.google.com/github/m3-learning/ISAF-PFM-Tutorial/blob/main/jupyterbook/ISAF_PFM_DataFed_Tutorial.ipynb" target="_blank">
+  <button class="bg-blue-600 text-white p-3 rounded-xl shadow-xl">
+    <h2>DataFed Tutorial</h2>
+  </button>
+</a>
+
+
+---
 src: ./slides/people/elephant.md
 ---
 
@@ -183,6 +195,18 @@ textboxHeight: 0
 <CrossfadeImages :images="[
   'people.png',
 ]"/>
+
+---
+layout: center
+title: Autoencoder Tutorial
+---
+
+<a href="https://colab.research.google.com/github/m3-learning/ISAF-PFM-Tutorial/blob/main/jupyterbook/Autoencoder-Tutorial.ipynb" target="_blank">
+  <button class="bg-blue-600 text-white p-3 rounded-xl shadow-xl">
+    <h2>Autoencoder Tutorial</h2>
+  </button>
+</a>
+
 
 ---
 layout: main-custom-layout
