@@ -3,7 +3,7 @@
 theme: ./slide-dev-template/slidev/theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-title: "🧠🧪 Many Single Atoms, Many Smarter Moves: Chem-AIstry in Motion – Fast Science, Faster Learning with ML, FPGAs, and Kubernetes"
+title: "ISAF-PFM 2025 Tutorial"
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
