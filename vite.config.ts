@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/ISAF-PFM-Tutorial/',
+  base: '/Broookhaven-8-18-2025/',
 })
